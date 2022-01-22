@@ -27,3 +27,7 @@ If you know what needs to be done please let me know.
 
 The VRPawn_Duplicate has two sections of added code, commented in hard to miss Purple, should be pretty easy to follow.
 If you have any questions reach out.
+
+
+Some insight was gained from this forums thread, though much of the og post has missing images the conversation was useful:
+https://forums.unrealengine.com/t/using-controllers-to-scale-rotate-re-position-world/74892/12
