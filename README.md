@@ -1,5 +1,4 @@
 # UE_VR_Locomotion_GripToMoveRotateScale
-Unreal Engine Virtual Reality Grip/Grab Locomotion. Grab to Move / Rotate (Scale not quite working)
 
 Using 4.27.2 default VR Template project
 Quest HMD (1/2)
