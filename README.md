@@ -1,5 +1,8 @@
 # UE VR Locomotion GripToMoveRotate
-Unreal Engine Virtual Reality Grip/Grab Locomotion. Grab to Move / Rotate (Scale not quite working)
+Unreal Engine Virtual Reality Grip/Grab Locomotion. Grab to Move / Rotate (Scale not quite working).
+
+Functionality also seen in Unreal Engine's built in VR Editor / TiltBrush (unity) / Demeo (unity) / and other experiences. Oculus also has a version of this in their locomotion samples [GrabAndDrag](https://developer.oculus.com/documentation/unreal/unreal-samples/) though it runs on tick and doesn't handle rotation.
+
 
 Dependencies *to avoid additional tweaking*:
  - Unreal Engine 4.27.2
