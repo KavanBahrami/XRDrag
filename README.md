@@ -1,4 +1,4 @@
-# UE_VR_Locomotion_GripToMoveRotateScale
+# UE VR Locomotion GripToMoveRotateScale
 Unreal Engine Virtual Reality Grip/Grab Locomotion. Grab to Move / Rotate (Scale not quite working)
 
 Using 4.27.2 default VR Template project
@@ -15,10 +15,9 @@ Quest HMD (1/2)
 7. Open VRTemplateMap > World Settings > Override Default Pawn with included "VRPawn_Duplicate"
 
 
----
 Play in VR preview or Build to HMD
 Use either grip to move your VRPawn around the scene. Use both grips to rotate your VRPawn around.
----
+
 Scale is partially implemented but the BP nodes are disconnected. I haven't yet figured out how to get it to work without being super jittery.
 If you know what needs to be done please let me know.
 
