@@ -7,8 +7,8 @@ This is my preferred way to move around smaller, roomscale VR scenes. As seen in
 Dependencies in my version, *recommended to avoid additional tweaking*:
  - Unreal Engine 4.27.2
  - default VR Template project
- - Enhanced Input (I like it and it seems to be the way the engine is moving, but it could be replaced with default input mappings)
- - Quest HMD (1/2)
+ - Enhanced Input (*I like it and it seems to be the way the engine is moving, but it could be replaced with default input mappings*)
+ - Meta Quest HMD (*tested with both v1 and v2*)
 
 
 **Setup:**
