@@ -10,7 +10,8 @@ As seen in Unreal Engine's built-in VR Editor / TiltBrush (unity) / Demeo (unity
 
 
 **Setup:**
-1. Add Enhanced Input.*default in 5.1+*
+*step 1 can be skipped since Enhanced Input is default in 5.1+*
+1. Add Enhanced Input.
 	Edit > Plugins > Enable "Enhanced Input" Plugin + Restart Now
 	Edit > Project Settings >
 	- Change the Default Player Input Class to "Enhanced"
@@ -19,11 +20,11 @@ As seen in Unreal Engine's built-in VR Editor / TiltBrush (unity) / Demeo (unity
 3. Copy the "VRGripMovement" folder into your project's Content directory
 4. Open Project
 5. Open VRTemplateMap > World Settings > Override Default Pawn with included "VRPawn_ue4" or "VRPawn_ue51"
-6. For UE5.1+ update the default input mappings: IMC_Default with both included grip inputs (sample IMC is included to refernce)
-7. Turn consume off on the current two Grab(R/L) inputs.
+6. For UE5.1+ update the default input mappings: IMC_Default with both included grip inputs (sample IMC is included for reference)
+7. Turn consume input OFF on the current two Grab(R/L) inputs.
 8. Delete unused VRPawn, ex: if using VRPawn_ue51 delete VRPawn_ue4 as it won't compile since it's using the previous default pawns no-longer-avail functions.
 
-Feature consists of 7 macros, 16 variables, 2 enchanced input actions, and two VRPawn samples (one for UE5.1 and another tested on 4.7). The two included VRPawn blueprints have two sections of added code, commented in hard-to-miss Purple, should be pretty easy to follow.
+Feature consists of 7 macros, 16 variables, 2 enchanced input actions, and two VRPawn samples (one for UE5.1 and another tested on UE4). The two included VRPawn blueprints have two sections of added code, commented in hard-to-miss Purple, should be pretty easy to follow.
 
 
 Play in VR preview or Build to HMD. Use either controller grips to move your VRPawn around the scene. Use both grips, grip and rotate controllers around each other to rotate your VRPawn around. Use both grips, pull together or apart, to adjust the world scale. Scaling only works on builds (standalone, toHMD, packaged), if you try to scale in VRPreview you'll just scale your hands but the world stays the same.
@@ -33,7 +34,7 @@ If you have any questions reach out.
 
 
 Tested with:
- - Unreal Engine < 5.0
+ - Unreal Engine 4.27
  - Unreal Engine 5+ 
  - default VR Template project
  - Enhanced Input (*I like it and it seems to be the way the engine is moving, but it could be replaced with default input mappings*)
