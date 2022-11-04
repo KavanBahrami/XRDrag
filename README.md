@@ -1,9 +1,8 @@
 # VR Locomotion Move Rotate Scale
 Unreal Engine Virtual Reality Grip/Grab Locomotion. Grab to Move / Rotate / Scale.
 
-demo in UE 5.1 : https://youtu.be/P7NQBMlyEJs
-
-demo of an earlier version with a buggy scale function: https://youtu.be/nO2tA2GukM4
+YOUTUBE demo in UE 5.1 : https://youtu.be/P7NQBMlyEJs
+YOUTUBE demo of an earlier version with a buggy scale function: https://youtu.be/nO2tA2GukM4
 
 This is my preferred way to move around smaller roomscale VR scenes.
 As seen in Unreal Engine's built-in VR Editor / TiltBrush (unity) / Demeo (unity) / and other experiences. I'm not sure how they did their versions. Oculus had a version of this in their locomotion samples [GrabAndDrag](https://developer.oculus.com/documentation/unreal/unreal-samples/) though it ran on tick and didn't handle rotation. I took inspiration from some basic climbing mechanics and allow full 360 movement. With slight tweaking you could limit the motion to one plane if you wanted, so users can't move into the sky or down below your level.
