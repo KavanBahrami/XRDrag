@@ -5,17 +5,7 @@ demo:
 demo of an earlier version with a buggy scale function: https://youtu.be/nO2tA2GukM4
 
 This is my preferred way to move around smaller roomscale VR scenes.
-As seen in Unreal Engine's built-in VR Editor / TiltBrush (unity) / Demeo (unity) / and other experiences. I'm not sure how they did their versions. Oculus had a version of this in their locomotion samples [GrabAndDrag](https://developer.oculus.com/documentation/unreal/unreal-samples/) though it ran on tick and didn't handle rotation.
-
-I took inspiration from some basic climbing mechanics and allow full 360 movement. With slight tweaking you could limit the motion to one plane if you wanted, so users can't move into the sky or down below your level.
-
-
-Tested with:
- - Unreal Engine < 5.0
- - Unreal Engine 5+ 
- - default VR Template project
- - Enhanced Input (*I like it and it seems to be the way the engine is moving, but it could be replaced with default input mappings*)
- - Meta Quest HMD (*tested with both v1 and v2*)
+As seen in Unreal Engine's built-in VR Editor / TiltBrush (unity) / Demeo (unity) / and other experiences. I'm not sure how they did their versions. Oculus had a version of this in their locomotion samples [GrabAndDrag](https://developer.oculus.com/documentation/unreal/unreal-samples/) though it ran on tick and didn't handle rotation. I took inspiration from some basic climbing mechanics and allow full 360 movement. With slight tweaking you could limit the motion to one plane if you wanted, so users can't move into the sky or down below your level.
 
 
 **Setup:**
@@ -31,16 +21,21 @@ Tested with:
 6. For UE5.1+ update the default input mappings: IMC_Default with both included grip inputs (sample IMC is included to refernce)
 7. Turn consume off on the current two Grab(R/L) inputs.
 
+Feature consists of 7 macros, 16 variables, 2 enchanced input actions, and two VRPawn samples (one for UE5.1 and another tested on 4.7). The two included VRPawn blueprints have two sections of added code, commented in hard-to-miss Purple, should be pretty easy to follow. Also delete the unused VRPawn, ex: if in UE5.1 delete VRPawnu_e4 as it won't compile since it's using the previous default pawns no longer avail functions.
+
 
 Play in VR preview or Build to HMD. Use either controller grips to move your VRPawn around the scene. Use both grips, grip and rotate controllers around each other to rotate your VRPawn around. Use both grips, pull together or apart, to adjust the world scale. Scaling only works on builds (standalone, toHMD, packaged), if you try to scale in VRPreview you'll just scale your hands but the world stays the same.
 
-Feature consists of 7 macros, 16 variables, 2 enchanced input actions 
-
-
-The VRPawn_ue4/51 blueprints have two sections of added code, commented in hard-to-miss Purple, should be pretty easy to follow.
 
 If you have any questions reach out.
 
+
+Tested with:
+ - Unreal Engine < 5.0
+ - Unreal Engine 5+ 
+ - default VR Template project
+ - Enhanced Input (*I like it and it seems to be the way the engine is moving, but it could be replaced with default input mappings*)
+ - Meta Quest HMD (*tested with both v1 and v2*)
 
 Known Issues:
 - Unreal has a long-known bug that prevents WorldToMetersScale from working if you have multiple editor tabs open, so to see the adjusted scale at runtime you need to close all tabs but the main map. This is an Unreal issue, not an issue with this implementation: https://forums.unrealengine.com/t/changing-world-to-meters-scale-at-runtime-disrupts-hmd-rendering-on-htc-vive/409868/8
