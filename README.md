@@ -1,7 +1,6 @@
 # VR Locomotion Move Rotate Scale
 Unreal Engine Virtual Reality Grip/Grab Locomotion. Grab to Move / Rotate / Scale.
 
-demo: 
 demo of an earlier version with a buggy scale function: https://youtu.be/nO2tA2GukM4
 
 This is my preferred way to move around smaller roomscale VR scenes.
@@ -20,8 +19,9 @@ As seen in Unreal Engine's built-in VR Editor / TiltBrush (unity) / Demeo (unity
 5. Open VRTemplateMap > World Settings > Override Default Pawn with included "VRPawn_ue4" or "VRPawn_ue51"
 6. For UE5.1+ update the default input mappings: IMC_Default with both included grip inputs (sample IMC is included to refernce)
 7. Turn consume off on the current two Grab(R/L) inputs.
+8. Delete unused VRPawn, ex: if using VRPawn_ue51 delete VRPawn_ue4 as it won't compile since it's using the previous default pawns no-longer-avail functions.
 
-Feature consists of 7 macros, 16 variables, 2 enchanced input actions, and two VRPawn samples (one for UE5.1 and another tested on 4.7). The two included VRPawn blueprints have two sections of added code, commented in hard-to-miss Purple, should be pretty easy to follow. Also delete the unused VRPawn, ex: if in UE5.1 delete VRPawnu_e4 as it won't compile since it's using the previous default pawns no longer avail functions.
+Feature consists of 7 macros, 16 variables, 2 enchanced input actions, and two VRPawn samples (one for UE5.1 and another tested on 4.7). The two included VRPawn blueprints have two sections of added code, commented in hard-to-miss Purple, should be pretty easy to follow.
 
 
 Play in VR preview or Build to HMD. Use either controller grips to move your VRPawn around the scene. Use both grips, grip and rotate controllers around each other to rotate your VRPawn around. Use both grips, pull together or apart, to adjust the world scale. Scaling only works on builds (standalone, toHMD, packaged), if you try to scale in VRPreview you'll just scale your hands but the world stays the same.
