@@ -1,6 +1,7 @@
 # VR Locomotion Move Rotate Scale
 Unreal Engine Virtual Reality Grip/Grab Locomotion. Grab to Move / Rotate / Scale.
 
+demo in UE 5.1 : https://youtu.be/P7NQBMlyEJs
 demo of an earlier version with a buggy scale function: https://youtu.be/nO2tA2GukM4
 
 This is my preferred way to move around smaller roomscale VR scenes.
