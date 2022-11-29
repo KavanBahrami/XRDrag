@@ -11,8 +11,9 @@ This is my preferred way to move around smaller roomscale VR scenes.
 As seen in Unreal Engine's built-in VR Editor / TiltBrush (unity) / Demeo (unity) / and other experiences. I'm not sure how they did their versions. Oculus had a version of this in their locomotion samples [GrabAndDrag](https://developer.oculus.com/documentation/unreal/unreal-samples/) though it ran on tick and didn't handle rotation. I took inspiration from some basic climbing mechanics and allow full 360 movement. With slight tweaking you could limit the motion to one plane if you wanted, so users can't move into the sky or down below your level.
 
 
-**Setup:**
-*step 1 can be skipped since Enhanced Input is default in 5.1+*
+**When updating to 5.1 I broke backwards compatability for the enahanced input actions, so for the moment, if you want to use this with any version prior to 5.1, you'll have to manually remake the Enhanced Input Actions and assign them etc, which isn't too difficult, but isn't ideal. Sorry :|
+
+*step 1 can be skipped if using ue5.1+ since Enhanced Input is now on by default*
 1. Add Enhanced Input.
 	Edit > Plugins > Enable "Enhanced Input" Plugin + Restart Now
 	Edit > Project Settings >
@@ -34,7 +35,6 @@ Play in VR preview or Build to HMD. Use either controller grips to move your VRP
 
 If you have any questions reach out.
 
-
 Tested with:
  - Unreal Engine 4.27
  - Unreal Engine 5+ 
@@ -43,6 +43,7 @@ Tested with:
  - Meta Quest HMD (*tested with both v1 and v2*)
 
 Known Issues:
+- ** When updating to 5.1 I broke backwards compatability for the enahanced input actions, so for the moment, if you want to use this with any version prior to 5.1, you'll have to manually remake the Enhanced Input Actions and assign them etc, which isn't too difficult, but isn't ideal. Sorry :|
 - Unreal has a long-known bug that prevents WorldToMetersScale from working if you have multiple editor tabs open, so to see the adjusted scale at runtime you need to close all tabs but the main map. This is an Unreal issue, not an issue with this implementation: https://forums.unrealengine.com/t/changing-world-to-meters-scale-at-runtime-disrupts-hmd-rendering-on-htc-vive/409868/8
 - Because the Grip buttons are set to a locomotion action if you use them to grab an object your hand will be fixed where you grab that object and you will be moving, rather than the gun or box (per default example). Since this isn't an issue in my experience I haven't built the required check into this code to decide how to react to different use cases. If you're using Grip buttons to grab objects you will need to do so.
 - There might be a few unused variables. Since I stripped this feature from a live project I might have missed a variable to two. Sorry. If this was a paid plug-in I would have spent more time making it perfect, enjoy. 
