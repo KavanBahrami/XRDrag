@@ -13,9 +13,11 @@ As seen in Unreal Engine's built-in VR Editor / TiltBrush (unity) / Demeo (unity
 Currently has Z-axis Yaw rotation (rotate self in a circle around pivot), x/y/z grab/pull movement.
 There is no X-axis Roll rotation or Y-axis Pitch rotation, though Pitch might be added as an expanded comfort setting.
 
-
-**When updating to 5.1 I broke backwards compatability for the enahanced input actions, so for the moment, if you want to use this with any version prior to 5.1, you'll have to manually remake the Enhanced Input Actions and assign them etc, which isn't too difficult, but isn't ideal. Sorry :|
-
+```diff
+- When updating to 5.1 I broke backwards compatability for the enahanced input actions, so for the moment,
+- if you want to use this with any version prior to 5.1, you'll have to manually remake the Enhanced Input Actions
+- and assign them etc, which isn't too difficult, but isn't ideal. Sorry :|
+```
 *step 1 can be skipped if using ue5.1+ since Enhanced Input is now on by default*
 1. Add Enhanced Input.
 	Edit > Plugins > Enable "Enhanced Input" Plugin + Restart Now
