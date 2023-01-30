@@ -10,6 +10,9 @@ YOUTUBE demo of an earlier version with a buggy scale function: https://youtu.be
 This is my preferred way to move around smaller roomscale VR scenes.
 As seen in Unreal Engine's built-in VR Editor / TiltBrush (unity) / Demeo (unity) / and other experiences. I'm not sure how they did their versions. Oculus had a version of this in their locomotion samples [GrabAndDrag](https://developer.oculus.com/documentation/unreal/unreal-samples/) though it ran on tick and didn't handle rotation. I took inspiration from some basic climbing mechanics and allow full 360 movement. With slight tweaking you could limit the motion to one plane if you wanted, so users can't move into the sky or down below your level.
 
+Currently has Z-axis Yaw rotation (rotate self in a circle around pivot), x/y/z grab/pull movement.
+There is no X-axis Roll rotation or Y-axis Pitch rotation, though Pitch might be added as an expanded comfort setting.
+
 
 **When updating to 5.1 I broke backwards compatability for the enahanced input actions, so for the moment, if you want to use this with any version prior to 5.1, you'll have to manually remake the Enhanced Input Actions and assign them etc, which isn't too difficult, but isn't ideal. Sorry :|
 
