@@ -29,6 +29,7 @@ There is no X-axis Roll rotation or Y-axis Pitch rotation, though Pitch might be
 4. Open Project
 5. Open VRTemplateMap > World Settings > Override Default Pawn with included "VRPawn_ue4" or "VRPawn_ue51"
 6. For UE5.1+ update the default input mappings: IMC_Default with both included grip inputs (sample IMC is included for reference)
+- VRTemplate>Input>IMC_Default
 7. Turn consume input OFF on the current two Grab(R/L) inputs.
 8. Delete unused VRPawn, ex: if using VRPawn_ue51 delete VRPawn_ue4 as it won't compile since it's using the previous default pawns no-longer-avail functions.
 
