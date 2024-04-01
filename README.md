@@ -22,8 +22,7 @@ Development insight was gained from [this forum thread](https://forums.unrealeng
 
 This took me a substantial amount of time to get working properly for my own project. I'm sharing this with the community because I've really appreciated it when other developers shared their work in forums and YouTube videos. If you do end up using this in your own projects, please let me know, I'd love to know if it's been helpful for other creators.
 
-If you have any questions, reach out.
-[kavanbahrami.com](https://kavanbahrami.com/)
+If you have any questions, [reach out](https://kavanbahrami.com/).
 
 ## Getting Started
 
