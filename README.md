@@ -12,26 +12,27 @@ Latest Tested: 5.3.2 uelauncher
 
 ## Context
 
-This blueprint code allows users to move their VR character by grabbing and pulling in the x, y, and z directions, as well as rotating around the Z-axis and scaling the world by pulling the controllers together or apart.
+This blueprint code allows users to move their VR character by grabbing and pulling in the x, y, and z directions, as well as rotating around the Z-axis and scaling the pawn by moving the controllers together or apart.
 
 Currently has Z-axis Yaw rotation (rotate self in a circle around pivot), x/y/z grab/pull movement. There is no X-axis Roll rotation or Y-axis Pitch rotation, though Pitch might be added as an expanded comfort setting.
 
 This is a comfortable way to move in smaller roomscale VR experiences,  and is similar to the locomotion used in Unreal Engine's built-in VR Editor, TiltBrush (Unity), and Demeo (Unity). Oculus had a version of this in their locomotion samples [GrabAndDrag](https://developer.oculus.com/documentation/unreal/unreal-samples/) - though last I looked it ran on tick and didn't handle rotation.
 
-Development insight was gained from [this forum thread](https://forums.unrealengine.com/t/using-controllers-to-scale-rotate-re-position-world/74892/12), though much of the og post has missing images the conversation was useful for someone interested in the mechanics. I also took inspiration from early VR climbing mechanics, expanding the range of motion for a full 360 movement. It's not currently a runtime variable in the current version, but if you wanted to limit the drag motion to x/y/z plane, you could easily enough with some slight tweaking to the component BP. Ex. prevent users from climbing into the sky or down below your level, or lock movement to different planes at runtime to enforce scene logic (in a well/passageway with limited movement). I might add this later if I have the time.
+Development insight was gained from [this forum thread](https://forums.unrealengine.com/t/using-controllers-to-scale-rotate-re-position-world/74892/12), though much of the og post has missing images the conversation was useful for someone interested in the mechanics. I also took inspiration from early VR climbing mechanics, expanding the range of motion for full 360 movement. AxisOfMovement is not currently a runtime variable, but if you wanted to limit the drag motion to x/y/z plane, you could easily enough with some slight tweaking to the component BP (e.g. prevent users from climbing into the sky or down below your level, or lock movement to different planes at runtime to enforce scene logic - in a well/passageway with limited movement). I might add this later.
 
 This took me a substantial amount of time to get working properly for my own project. I'm sharing this with the community because I've really appreciated it when other developers shared their work in forums and YouTube videos. If you do end up using this in your own projects, please let me know, I'd love to know if it's been helpful for other creators.
 
 If you have any questions, reach out.
+[kavanbahrami.com](https://kavanbahrami.com/)
 
 ## Getting Started
 
 Add DragRotateScale locomotion to the default VR template.
 
-Files:
-- DragRotateScaleActorComponent
-- LeftInputAction
-- RightInputAction
+### Files
+- DragRotateScale ActorComponent
+- Left InputAction
+- Right InputAction
 - InputMappingContext (IMC)
 
 ### Setup
@@ -42,7 +43,7 @@ Files:
 
 3. Either: 
   
-  - Update your current InputMappingContext (eg IMC_Default) to reference the included L/R InputActions. You can use the included InputMappingContext as an example reference
+  - Update your current InputMappingContext (e.g. IMC_Default) to reference the included L/R InputActions. You can use the included InputMappingContext as an example reference
   - IMC_Default can be located in "VRTemplate > Input > "
   
   or
@@ -59,8 +60,8 @@ Files:
 ![SetComponentVariables](BeginPlay_SetComponentVariables.PNG)
 
 6. Within your VRPawn's event graph, add the EnhancedActionEvent for the included L/R InputActions. Call the following functions from the now attached BP_DragRotateScaleComponent, passing them the appropriate L or R motion controller
-- from Triggered, call MoveRotateScale
 - from Started, call SetInitialVariables
+- from Triggered, call MoveRotateScale
 - from Canceled and Completed, call ReleaseGrab
 
 ![EnhancedActionEvents](IA_SetInputFunctions.PNG)
@@ -80,14 +81,10 @@ Play in VR preview or build to HMD. Use the set input action (defaults to grips 
 
 - Sometimes there are backwards compatibility issues with uassets. These assets were last updated in 5.3.2. If you're using an older engine version and the Input Actions are 'broken' you'll have to manually remake and assign them, which isn't too difficult, but also isn't ideal.
 
-- Unreal has a long-known bug that prevents WorldToMetersScale from working if you have multiple editor tabs open, so to see the adjusted scale at runtime you need to close all tabs but the main map. This is an Unreal issue, not an issue with this implementation: https://forums.unrealengine.com/t/changing-world-to-meters-scale-at-runtime-disrupts-hmd-rendering-on-htc-vive/409868/8
 
-- Scaling only works on builds (standalone, toHMD, packaged), if you try to scale in VRPreview you'll just scale your hands but the world stays the same. This is an Unreal issue, not an issue with the functionality
+## Archive Versions
 
-
-## Archive
-
-The previous versions had the functionality within included VRPawn blueprints. These are still available in the archive folder. The functionality was moved to a more modular actor component for the latest BP version. At some point I'll get around to uploading the C++ version as well.
+The previous versions had the functionality within included VRPawn blueprints. These are still available in the archive zip. The functionality was moved to a more modular ActorComponent for the latest BP version. At some point I'll get around to uploading the C++ version as well.
 
 
 ### Unreal 4 / Archive Setup
