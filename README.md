@@ -6,7 +6,7 @@ Latest Tested: 5.3.2 uelauncher
 ## Demo
 [quick demonstration on YouTube](https://youtu.be/P7NQBMlyEJs):
 
-![Demo GIF](MoveScaleRotate.gif)
+![Demo GIF](img/MoveScaleRotate.gif)
 
 ... [link to earlier version](https://youtu.be/nO2tA2GukM4) (with a buggy scale function)
 
@@ -51,20 +51,20 @@ Add DragRotateScale locomotion to the default VR template.
   - Call AddMappingContext on your VRPawn and add the included IMC. Set "Priority: 1" to prevent the default mapping from consuming your inputs.
   - Update your PlayerMappableInputConfig to reference the included InputMappingContext. _I saw that this was potentially going to be deprecated, but as of 5.3.2 it's still there and being used._
 
-![InputMappingContext](Update_PlayerMappableInputConfig.PNG)
+![InputMappingContext](img/Update_PlayerMappableInputConfig.PNG)
 
 4. Add the DragRotateScaleActorComponent to your VRPawn
 
 5. On your pawn's BeginPlay, call SetComponentVariables and provide references from your pawn's Components
 
-![SetComponentVariables](BeginPlay_SetComponentVariables.PNG)
+![SetComponentVariables](img/BeginPlay_SetComponentVariables.PNG)
 
 6. Within your VRPawn's event graph, add the EnhancedActionEvent for the included L/R InputActions. Call the following functions from the now attached BP_DragRotateScaleComponent, passing them the appropriate L or R motion controller
 - from Started, call SetInitialVariables
 - from Triggered, call MoveRotateScale
 - from Canceled and Completed, call ReleaseGrab
 
-![EnhancedActionEvents](IA_SetInputFunctions.PNG)
+![EnhancedActionEvents](img/IA_SetInputFunctions.PNG)
 
 7. Update the default settings on the BP_DragRotateScaleComponent, Min/Max Scale, etc...
 
