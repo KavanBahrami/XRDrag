@@ -2,7 +2,7 @@
 
 Unreal Engine Virtual Reality Drag Locomotion. Using a Grip/Grab Input: Move, Rotate, Scale your VR Pawn.
 
-Latest Tested: 5.3.2 uelauncher
+Latest Tested: 5.4 uelauncher
 ## Demo
 [quick demonstration on YouTube](https://youtu.be/P7NQBMlyEJs):
 
