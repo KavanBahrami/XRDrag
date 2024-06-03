@@ -42,12 +42,12 @@ Add DragRotateScale locomotion to the default VR template.
 
 3. Either: 
   
-  - Update your current InputMappingContext (Content/VRTemplate/Input/IMC_Default) to reference the included L/R InputActions (IA_DragRotateScale). You can use the included InputMappingContext as an example reference
+  A - Update your current InputMappingContext (Content/VRTemplate/Input/IMC_Default) to reference the included L/R InputActions (IA_DragRotateScale). You can use the included InputMappingContext as an example reference
   
   or (the perhaps clearer option)
 
-  - Call AddMappingContext on your VRPawn and add the included IMC. Set "Priority: 1" to prevent the default mapping from consuming your inputs.
-  - Update your PlayerMappableInputConfig (Content/VRTemplate/Input/PMI_VRTemplate) to reference the included InputMappingContext. _In 5.4 it says "deprecated - use UEnhancedInputUserSettings" but the default VR template still uses it, so..._
+  B - Call AddMappingContext on your VRPawn and add the included IMC. Set "Priority: 1" to prevent the default mapping from consuming your inputs.
+  B.2- Update your PlayerMappableInputConfig (Content/VRTemplate/Input/PMI_VRTemplate) to reference the included InputMappingContext. _In 5.4 it says "deprecated - use UEnhancedInputUserSettings" but the default VR template still uses it, so..._
 
 ![InputMappingContext](img/Update_PlayerMappableInputConfig.PNG)
 
