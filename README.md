@@ -1,6 +1,6 @@
 # XR DragLocomotion Move Rotate Scale
 
-Unreal Engine Virtual Reality Drag Locomotion. Using a Grip/Grab Input: Move, Rotate, Scale your VR Pawn.
+Unreal Engine Virtual Reality Drag Locomotion. Implemented using a Grip/Grab Input: Move, Rotate, Scale your VR Pawn.
 
 Latest Tested: 5.4 uelauncher
 ## Demo
