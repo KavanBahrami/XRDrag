@@ -49,6 +49,7 @@ Add DragRotateScale locomotion to the default VR template.
    **'From Scratch':** Call AddMappingContext on your VRPawn and add the included IMC. Set "Priority: 1" to prevent the default mapping from consuming your inputs. Then, update your PlayerMappableInputConfig (Content/VRTemplate/Input/PMI_VRTemplate) to reference the included InputMappingContext. _In 5.4 it says "deprecated - use UEnhancedInputUserSettings" but the default VR template still uses it, so..._
 
 ![InputMappingContext](img/Update_PlayerMappableInputConfig.PNG)
+![image](https://github.com/user-attachments/assets/2b120364-f5de-4ca3-ad9d-ad3c9607fd03)
 
 4. Add the DragRotateScaleActorComponent to your VRPawn
 
